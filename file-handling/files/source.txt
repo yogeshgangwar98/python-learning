@@ -1,0 +1,4 @@
+Hello
+This is my assignment for File handling in python
+python is a wonderful language to learn AI
+Gen AI is demandable job in 2026
