@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <a href="{{ url_for('student.add') }}">
+        <button type="submit" class="btn btn-success">
+            Add Student
+        </button>
+    </a>
+
+    <table>
+        {% for student in students %}
+            <tr>
+                <td><a href="{{ url_for('student.profile',student_id=student.id) }}">{{student["name"]}}</a></td>
+                <td><a href="{{ url_for('student.edit',student_id=student.id) }}">Edit</a></td>
+                <td><a href="{{ url_for('student.delete',student_id=student.id) }}">Delete</a></td>
+            </tr>
+        
+        {% endfor %}
+    </table>
+    
+
+{% endblock %}
